@@ -1,0 +1,35 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "vue express mongodb",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuniorChang/Project2.git"
+  },
+  "keywords": [
+    "vue",
+    "express",
+    "mongodb"
+  ],
+  "author": "Chang Jia Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuniorChang/Project2/issues"
+  },
+  "homepage": "https://github.com/JuniorChang/Project2#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "mongodb": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
