@@ -156,9 +156,22 @@
         </div>
       </div>
     </form>
-    <div class="body"></div>
-  </div>
+    
 <!-- End of Item Selection -->
+
+<!-- Start of Submit Button -->
+  <div> 
+      <button class="btn btn-primary" v-on:click="addNewChar">
+          Add Now
+      </button>
+  </div>
+  <div class="body"></div>
+
+
+  </div>
+
+
+
 </template>
 
 
@@ -201,5 +214,9 @@ export default {
 
 .body {
   min-height: 500px;
+}
+
+.btn {
+    margin-top: 10px;
 }
 </style>

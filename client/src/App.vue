@@ -4,7 +4,7 @@
 
     <img class="img-fluid body-img" src="./assets/bg.jpg" />
 
-    <div class="container-fluid">
+    <div class="container container-fluid .col-xs">
       <div class="alert alert-success my-3" v-if="status">
         {{ status }}
       </div>
@@ -39,6 +39,7 @@
 <script>
 import playerList from "./components/playerList.vue";
 import WildPath from "./components/WildPath.vue";
+
 
 
 export default {
@@ -77,11 +78,27 @@ export default {
   opacity: 0.3;
 }
 
-.container-fluid {
+
+@media only screen and (max-width: 786px) {
+  .container-fluid {
+    position: absolute;
+    top: 130px;
+  }
+
+  }
+@media screen and (min-width: 800px) {
+  .container-fluid {
+    position: absolute;
+    top: 470px;
+  }
+
+  
+}
+/* .container-fluid {
   position: absolute;
   top:470px;
 
-}
+} */
 
 
 
