@@ -2,13 +2,16 @@
   <div>
     <h1>Testing</h1>
     <h2>THIS THIS THIS</h2>
-    <!-- For Name Input -->
+
+    
+<!-- Start of Name Input -->
     <div>
       <label class="form-label"> Character Name </label>
       <input class="form-control char-name" type="text" v-model="name" />
     </div>
+<!-- End of Name Input -->
 
-    <!-- For Role Selection -->
+<!-- Start of Role Selection -->
     <label class="role">Select Your Role</label>
     <div class="d-flex justify-content-start">
       <div class="form-check">
@@ -76,11 +79,11 @@
           checked
         />
         <label class="form-check-label" for="flexRadioDefault2"> Roam </label>
-      </div>
-
-      
+      </div>     
     </div>
+<!-- End of Role Selection -->
 
+<!-- Start of Server Selection -->
     <div class="dropdown">
       <button
         class="btn btn-secondary dropdown-toggle"
@@ -93,12 +96,14 @@
         Server
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Alpha</a>
-        <a class="dropdown-item" href="#">Beta</a>
-        <a class="dropdown-item" href="#">Charlie</a>
+        <a class="dropdown-item" href="Alpha">Alpha</a>
+        <a class="dropdown-item" href="Beta">Beta</a>
+        <a class="dropdown-item" href="Charlie">Charlie</a>
       </div>
     </div>
+<!-- End of Server Selection -->
 
+<!-- Start of Item Selection -->
     <form>
       <div class="form-group d-flex justify-content-start">
         <div class="form-check">
@@ -153,14 +158,23 @@
     </form>
     <div class="body"></div>
   </div>
+<!-- End of Item Selection -->
 </template>
+
+
+
+
+
 
 <script>
 export default {
-  name: "WildPath",
+  name: "AddChar",
   data: function () {
     return {
-      WildPath: [],
+      name: "",
+      role:"",
+      server:"",
+      items: [],
     };
   },
 };
@@ -168,24 +182,8 @@ export default {
 
 // const API_URL = ""
 
-// export default {
-// name: "WildPath",
-// data: function() {
-//     return {
-//         name: "",
-//     };
-// },
-// methods: {
-//     processWildPath: async function () {
-//         await axios.post(API_URL + "/WildPath",{
-//             Name: this.name,
-//             Server: this.server,
+   
 
-//         });
-//         this.$emit("new-data-added");
-//     }
-// }
-// }
 </script>
 
 <style scoped>

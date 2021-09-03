@@ -2,6 +2,8 @@
   <div>
     <img class="img-fluid topbanner" src="./assets/topbanner.jpg" />
 
+    <img class="img-fluid body-img" src="./assets/bg.jpg" />
+
     <div class="container-fluid">
       <div class="alert alert-success my-3" v-if="status">
         {{ status }}
@@ -69,6 +71,19 @@ export default {
 .topbanner {
   min-width: 100%;
 }
+
+.body-img {
+  position: relative;
+  opacity: 0.3;
+}
+
+.container-fluid {
+  position: absolute;
+  top:470px;
+
+}
+
+
 
 
 </style>
