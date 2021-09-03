@@ -1,42 +1,207 @@
 <template>
+  <div>
+    <h1>Testing</h1>
+    <h2>THIS THIS THIS</h2>
+    <!-- For Name Input -->
     <div>
-        <h1> Testing </h1>
-        <div> 
-            <label class="form-label"> Name </label>
-            <input class="form-control" type="text" v-model="name" />
-        </div>
-        <div>
-            <label class="form-label"> Server </label>
-            <input class="form-control" type="text" v-model="server" />
-        </div>
-        <button class="mt-3 btn btn-primary" v-on:click="processWildPath">
-            Add
-        </button>
-
+      <label class="form-label"> Character Name </label>
+      <input class="form-control char-name" type="text" v-model="name" />
     </div>
+
+    <!-- For Role Selection -->
+    <label class="role">Select Your Role</label>
+    <div class="d-flex justify-content-start">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+          value="role"
+          v-model="role"
+        />
+
+        <label class="form-check-label" for="flexRadioDefault1"> Solo </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          value="role"
+          v-model="role"
+          checked
+        />
+
+        <label class="form-check-label" for="flexRadioDefault2">
+          Support
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          value="support"
+          v-model="role"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> Mid </label>
+      </div>
+
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          value="mid"
+          v-model="role"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> AD </label>
+      </div>
+
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          value="AD"
+          v-model="role"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> Roam </label>
+      </div>
+
+      
+    </div>
+
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Server
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Alpha</a>
+        <a class="dropdown-item" href="#">Beta</a>
+        <a class="dropdown-item" href="#">Charlie</a>
+      </div>
+    </div>
+
+    <form>
+      <div class="form-group d-flex justify-content-start">
+        <div class="form-check">
+          <label for="Boots" class="form-check-label">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="boots"
+              value="boots"
+              v-model="items"
+            />
+            Boots
+          </label>
+        </div>
+        <div class="form-check">
+          <label for="hand" class="form-check-label">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="hand"
+              value="hand"
+              v-model="items"
+            />
+            hand
+          </label>
+        </div>
+        <div class="form-check">
+          <label for="head" class="form-check-label">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="head"
+              value="head"
+              v-model="items"
+            />
+            head
+          </label>
+        </div>
+        <div class="form-check">
+          <label for="weapon" class="form-check-label">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="weapon"
+              value="weapon"
+              v-model="items"
+            />
+            weapon
+          </label>
+        </div>
+      </div>
+    </form>
+    <div class="body"></div>
+  </div>
 </template>
 
 <script>
+export default {
+  name: "WildPath",
+  data: function () {
+    return {
+      WildPath: [],
+    };
+  },
+};
 // import axios from "axios";
 
 // const API_URL = ""
 
-export default {
-    // name: "WildPath",
-    // data: function() {
-    //     return {
-    //         name: "",
-    //     };
-    // },
-    // methods: {
-    //     processWildPath: async function () {
-    //         await axios.post(API_URL + "/WildPath",{
-    //             Name: this.name,
-    //             Server: this.server,
+// export default {
+// name: "WildPath",
+// data: function() {
+//     return {
+//         name: "",
+//     };
+// },
+// methods: {
+//     processWildPath: async function () {
+//         await axios.post(API_URL + "/WildPath",{
+//             Name: this.name,
+//             Server: this.server,
 
-    //         });
-    //         this.$emit("new-data-added");
-    //     }
-    // }
-}
+//         });
+//         this.$emit("new-data-added");
+//     }
+// }
+// }
 </script>
+
+<style scoped>
+.char-name {
+  max-width: 25vw;
+}
+
+.dropdown {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+.body {
+  min-height: 500px;
+}
+</style>
